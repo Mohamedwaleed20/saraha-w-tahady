@@ -1,7 +1,9 @@
 body {
   font-family: 'Cairo', sans-serif;
   direction: rtl;
-  transition: background-color 0.5s, color 0.5s;
+  background-color: #121212;
+  color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .card {
@@ -9,8 +11,8 @@ body {
   background-color: #222;
   color: #fff;
   border-radius: 15px;
-  box-shadow: 0 0 15px #444;
-  transition: background-color 0.5s, color 0.5s;
+  box-shadow: 0 0 15px rgba(68, 68, 68, 0.5);
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 }
 
 body.light-mode {
@@ -19,6 +21,28 @@ body.light-mode {
 }
 
 body.light-mode .card {
-  background-color: #fff !important;
+  background-color: #ffffff !important;
   color: #000 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+body.light-mode footer {
+  background-color: #f8f9fa !important;
+  color: #000 !important;
+  border-top: 1px solid #ccc;
+}
+
+.btn-outline-light {
+  transition: all 0.3s ease;
+}
+body.light-mode .btn-outline-light {
+  color: #000 !important;
+  border-color: #000 !important;
+}
+body.light-mode .btn-outline-light:hover {
+  background-color: #000 !important;
+  color: #fff !important;
 }
